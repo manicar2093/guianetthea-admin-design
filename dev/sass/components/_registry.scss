@@ -1,0 +1,27 @@
+.registry {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+    background-color: white;
+    justify-content: center;
+    margin: .5rem;
+    border-bottom: #bfbfbf solid 2px;
+
+    &_info {
+        margin: 1rem;
+        position: relative;
+        flex-grow: 1;
+        &--center {
+            vertical-align: middle;
+        }
+    }
+
+    &_label {
+        font-size: .8rem;
+        display: block;
+        margin-bottom: .7rem;
+        color: #bfbfbf;
+    }
+
+}
