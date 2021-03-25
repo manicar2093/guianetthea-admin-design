@@ -1,20 +1,17 @@
 .registry {
     display: flex;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    text-align: center;
     width: auto;
-    background-color: white;
-    justify-content: center;
     margin: .5rem;
-    border-bottom: #bfbfbf solid 2px;
+    border-bottom: #bfbfbf solid 1px;
 
     &_info {
         margin: 1rem;
         position: relative;
         flex-grow: 1;
-        &--center {
-            vertical-align: middle;
-        }
     }
 
     &_label {

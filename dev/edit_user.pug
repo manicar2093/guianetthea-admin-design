@@ -1,0 +1,53 @@
+doctype html
+html(lang="en")
+    include includes/utils.pug
+    - const title = "Editar usuario"
+    +head(title)
+    body 
+        include includes/navbar.pug
+
+        .container
+            .columns
+
+                include includes/menu.pug
+
+                .column.is-10.is-fullheight.section
+                    .hero.is-info.is-small
+                        .hero-body
+                            p.title Editar Usuario
+                            p.subtitle Cambia los datos y da guardar para editar el usuario {{.UserMail}}
+                    form.form.mt-5(action="#")
+                        .field-group
+                            .field
+                                label.label Nombre(s)
+                                .control
+                                    input.input(type="text" placeholder="Nombres(s)" value="Erick Eduardo")
+                                p.help.is-danger El nombre no es valido
+                            .field
+                                label.label Apellido Paterno
+                                .control
+                                    input.input(type="text" placeholder="Apellido Paterno" value="Ortega")
+                                p.help.is-danger El apellido paterno no es valido
+                        .field-group
+                            .field
+                                label.label Apellido Materno
+                                .control
+                                    input.input(type="text" placeholder="Apellido Materno" value="de la Luz")
+                                p.help.is-danger El apellido materno no es valido
+                            .field
+                                label.label Correo Electrónico
+                                .control
+                                    input.input(type="email" placeholder="Correo Electrónico" value="uncorreodeejemplo90@correo.com")
+                                p.help.is-danger El correo electrónico no es valido
+                        hr
+                        .field-group
+                            .field
+                                label.label Rol
+                                .select
+                                    select
+                                        option(value="0") Selecciona un Rol
+                                        option(value="1") General
+                                        option(value="2" selected) Admin
+                                p.help.is-danger Selecciona un rol
+                        .buttons.is-justify-content-flex-end.mt-2
+                            .button.is-primary Guardar                        

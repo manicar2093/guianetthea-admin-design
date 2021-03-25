@@ -1,3 +1,7 @@
 .registries {
     height: 600px;
+    @include mobile {
+        height: auto;
+        overflow: visible;
+    }
 }

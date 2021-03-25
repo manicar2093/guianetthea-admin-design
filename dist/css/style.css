@@ -7761,24 +7761,77 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .show_overflow {
   overflow: auto; }
 
+body {
+  overflow-x: hidden; }
+
 .registries {
   height: 600px; }
+  @media screen and (max-width: 768px) {
+    .registries {
+      height: auto;
+      overflow: visible; } }
+
+.form {
+  height: 700px;
+  overflow: auto; }
+  @media screen and (max-width: 768px) {
+    .form {
+      height: auto;
+      overflow: visible; } }
+  .form .field-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+    .form .field-group .field {
+      flex-grow: 2;
+      margin-right: 1rem; }
+    @media screen and (max-width: 768px) {
+      .form .field-group {
+        flex-wrap: nowrap;
+        flex-direction: column; } }
+
+.columns {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0; }
+
+.aside {
+  animation-duration: .4s;
+  animation-name: slidein;
+  animation-direction: alternate; }
+  @media screen and (max-width: 1023px) {
+    .aside {
+      display: none;
+      position: absolute;
+      width: 100%;
+      background-color: white;
+      z-index: 3;
+      box-shadow: -2px 15px 37px -10px #000000; } }
+
+@keyframes slidein {
+  from {
+    display: none;
+    margin-left: 100%;
+    width: 300%; }
+  to {
+    display: block;
+    margin-left: 0%;
+    width: 100%; } }
 
 .registry {
   display: flex;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  text-align: center;
   width: auto;
-  background-color: white;
-  justify-content: center;
   margin: .5rem;
-  border-bottom: #bfbfbf solid 2px; }
+  border-bottom: #bfbfbf solid 1px; }
   .registry_info {
     margin: 1rem;
     position: relative;
     flex-grow: 1; }
-    .registry_info--center {
-      vertical-align: middle; }
   .registry_label {
     font-size: .8rem;
     display: block;
