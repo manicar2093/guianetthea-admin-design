@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+    include mixins/utils.pug
+    - const title = "Bienvenido"
+    +head(title)
+    body 
+        
+        include includes/navbar.pug
+
+        .container
+            .columns
+
+                include includes/menu.pug
+
+                .column.is-10.is-fullheight.section.is-full-touch
+                    .hero.is-info.is-medium
+                        .hero-body
+                            p.title ¡Bienvenido a tu administrador!
+                            p.subtitle Selecciona una de las opciones disponibles para continuar.

@@ -1,0 +1,8 @@
+.invisible-on-touch {
+    
+    @include touch {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+}

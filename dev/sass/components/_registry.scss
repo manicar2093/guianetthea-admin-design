@@ -1,0 +1,24 @@
+.registry {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    width: auto;
+    margin: .5rem;
+    border-bottom: #bfbfbf solid 1px;
+
+    &_info {
+        margin: 1rem;
+        position: relative;
+        flex-grow: 1;
+    }
+
+    &_label {
+        font-size: .8rem;
+        display: block;
+        margin-bottom: .7rem;
+        color: #bfbfbf;
+    }
+
+}

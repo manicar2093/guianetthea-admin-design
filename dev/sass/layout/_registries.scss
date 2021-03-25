@@ -1,0 +1,7 @@
+.registries {
+    height: 600px;
+    @include touch {
+        height: auto;
+        overflow: visible;
+    }
+}

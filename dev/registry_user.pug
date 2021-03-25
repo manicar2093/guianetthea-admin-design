@@ -1,0 +1,62 @@
+doctype html
+html(lang="en")
+    include mixins/utils.pug
+    - const title = "Registrar Usuario"
+    +head(title)
+    body 
+        include includes/navbar.pug
+
+        .container
+            .columns
+
+                include includes/menu.pug
+
+                .column.is-10.is-fullheight.section.is-full-touch
+                    .hero.is-info.is-small
+                        .hero-body
+                            p.title Registrar Usuario
+                            p.subtitle Llena el formulario con la información solicitada y crea un nuevo
+                    form.form.mt-5(action="#")
+                        .field-group
+                            .field
+                                label.label Nombre(s)
+                                .control
+                                    input.input(type="text" placeholder="Nombres(s)")
+                                p.help.is-danger El nombre no es valido
+                            .field
+                                label.label Apellido Paterno
+                                .control
+                                    input.input(type="text" placeholder="Apellido Paterno")
+                                p.help.is-danger El apellido paterno no es valido
+                        .field-group
+                            .field
+                                label.label Apellido Materno
+                                .control
+                                    input.input(type="text" placeholder="Apellido Materno")
+                                p.help.is-danger El apellido materno no es valido
+                            .field
+                                label.label Correo Electrónico
+                                .control
+                                    input.input(type="email" placeholder="Correo Electrónico")
+                                p.help.is-danger El correo electrónico no es valido
+                        hr
+                        .field-group
+                            .field
+                                label.label Contraseña
+                                .control
+                                    input.input(type="password" placeholder="Contraseña")
+                            .field
+                                label.label Confirma contraseña
+                                .control
+                                    input.input(type="password" placeholder="Confirma contraseña")
+                                p.help.is-danger Las contraseñas no coinciden
+                            .field
+                                label.label Rol
+                                .select
+                                    select
+                                        option(value="0") Selecciona un Rol
+                                p.help.is-danger Selecciona un rol
+                        .buttons.is-justify-content-flex-end
+                            .button.is-primary Guardar
+                            .button.is-warning Limpiar
+                        

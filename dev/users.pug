@@ -1,0 +1,61 @@
+doctype html
+html(lang="en")
+    include mixins/utils.pug
+    - const title = "Usuarios"
+    +head(title)
+    body 
+        
+        include includes/navbar.pug
+
+        .container
+            .columns
+                include includes/menu.pug
+                    
+                
+                .column.is-10.is-narrow-mobile.is-fullheight.section.is-full-touch
+                    .hero.is-info.is-small
+                        .hero-body
+                            p.title Adminsitra tus usuarios
+                            p.subtitle Aquí se encuentran todos los usuarios que tienes registrados.
+                    .registries.show_overflow.mt-5
+                        each n in [1,2,3,4,5,6,7,8,9,10]
+                            .registry
+                                .registry_info
+                                    label.registry_label Nombre
+                                    p Erick Eduardo
+                                .registry_info
+                                    label.registry_label Apellido Paterno
+                                    p Ortega
+                                .registry_info
+                                    label.registry_label Apellido Materno
+                                    p de la Luz
+                                .registry_info
+                                    label.registry_label Rol
+                                    p Admin
+                                .registry_info
+                                    label.registry_label Correo Electrónico
+                                    p uncorreodeejemplo90@correo.com
+                                .registry_info
+                                    label.registry_label Acciones
+                                    .buttons.is-justify-content-center
+                                        a.button.is-info.is-small(href="edit_user.html") Editar
+                                        a.button.is-warning.is-small(href="#") Reestablecer
+                                        a.button.is-danger.is-small(href="#") Borrar
+                    nav.pagination.is-centered.mt-5(role="navigation" aria-label="pagination")
+                        a.pagination-previous Previous
+                        a.pagination-next Next
+                        ul.pagination-list
+                            li
+                                a.pagination-link(aria-label="Goto page 1") 1
+                            li
+                                span.pagination-ellipsis &hellip;
+                            li
+                                a.pagination-link(aria-label="Goto page 45") 45
+                            li
+                                a.pagination-link(aria-label="Goto page 46") 46
+                            li
+                                a.pagination-link(aria-label="Goto page 47") 47
+                            li
+                                span.pagination-ellipsis &hellip;
+                            li
+                                a.pagination-link(aria-label="Goto page 89") 89
