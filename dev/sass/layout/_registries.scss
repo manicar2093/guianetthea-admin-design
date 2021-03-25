@@ -1,6 +1,6 @@
 .registries {
     height: 600px;
-    @include mobile {
+    @include touch {
         height: auto;
         overflow: visible;
     }

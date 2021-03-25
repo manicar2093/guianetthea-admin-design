@@ -1,6 +1,6 @@
 doctype html
 html(lang="en")
-    include includes/utils.pug
+    include mixins/utils.pug
     - const title = "Bienvenido"
     +head(title)
     body 
@@ -12,7 +12,7 @@ html(lang="en")
 
                 include includes/menu.pug
 
-                .column.is-10.is-fullheight.section
+                .column.is-10.is-fullheight.section.is-full-touch
                     .hero.is-info.is-medium
                         .hero-body
                             p.title ¡Bienvenido a tu administrador!

@@ -5,30 +5,14 @@
 }
 
 .aside {
-    animation-duration: .4s;
-    animation-name: slidein;
-    animation-direction: alternate;
 
+    transition: all .3s ease-in;
+    
     @include touch {
-        display: none;
         position: absolute;
         width: 100%;
         background-color: white;
         z-index: 3;
         box-shadow: -2px 15px 37px -10px #000000;
-    }
-}
-
-@keyframes slidein {
-    from {
-        display: none;
-        margin-left: 100%;
-        width: 300%
-    }
-
-    to {
-        display: block;
-        margin-left: 0%;
-        width: 100%;
     }
 }

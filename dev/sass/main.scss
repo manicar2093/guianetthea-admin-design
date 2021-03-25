@@ -1,6 +1,12 @@
 @import "../../node_modules/bulma/bulma";
+@import "abstract/functions";
+@import "abstract/mixins";
+@import "abstract/variables";
 @import "base/overflow";
 @import "base/base";
+@import "base/utils";
+@import "base/animations";
+@import "base/typography";
 @import "layout/registries";
 @import "layout/form";
 @import "layout/layout";

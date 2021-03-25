@@ -1,6 +1,6 @@
 doctype html
 html(lang="en")
-    include includes/utils.pug
+    include mixins/utils.pug
     - const title = "Bitácora"
     +head(title)
     body
@@ -10,3 +10,24 @@ html(lang="en")
             .columns
 
                 include includes/menu.pug
+
+                .column.is-10.is-fullheight.section.is-full-touch
+                    .hero.is-info.is-small
+                        .hero-body
+                            p.title Bitácora
+                            p.subtitle Llena los campos de fecha para poder generar la bitácora de accesos realizados
+                    form.form.mt-5(action="#")
+                        .field-group
+                            .field
+                                label.label Fecha inicial
+                                .control
+                                    input.input(type="date")
+                                p.help.is-danger La fecha no es valida
+                                p.help.is-danger Esta fecha no puede ser mayor a la Fecha final
+                            .field
+                                label.label Fecha final
+                                .control
+                                    input.input(type="date")
+                                p.help.is-danger La fecha no es valida
+                        .buttons.is-justify-content-flex-end.mt-2
+                            .button.is-primary Crear

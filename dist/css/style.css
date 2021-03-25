@@ -7761,12 +7761,14 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .show_overflow {
   overflow: auto; }
 
-body {
-  overflow-x: hidden; }
+@media screen and (max-width: 1023px) {
+  .invisible-on-touch {
+    visibility: hidden;
+    opacity: 0; } }
 
 .registries {
   height: 600px; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1023px) {
     .registries {
       height: auto;
       overflow: visible; } }
@@ -7797,27 +7799,14 @@ body {
   margin-right: 0; }
 
 .aside {
-  animation-duration: .4s;
-  animation-name: slidein;
-  animation-direction: alternate; }
+  transition: all .3s ease-in; }
   @media screen and (max-width: 1023px) {
     .aside {
-      display: none;
       position: absolute;
       width: 100%;
       background-color: white;
       z-index: 3;
       box-shadow: -2px 15px 37px -10px #000000; } }
-
-@keyframes slidein {
-  from {
-    display: none;
-    margin-left: 100%;
-    width: 300%; }
-  to {
-    display: block;
-    margin-left: 0%;
-    width: 100%; } }
 
 .registry {
   display: flex;
