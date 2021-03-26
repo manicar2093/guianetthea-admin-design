@@ -7,6 +7,34 @@ html(lang="en")
         
         include includes/navbar.pug
 
+        #restore_password_form.modal.is-clipped
+            .modal-background
+            .modal-content
+                .box
+                    h2.is-size-2.mb-3 Usuario {{Usuario}}
+                    .field
+                        label.label Nueva contraseña
+                        .control
+                            input.input(type="password")
+                    .field
+                        label.label Confirma contraseña
+                        .control
+                            input.input(type="password")
+                        p.help.is-danger Las contraseñas no coinciden
+                    .buttons.is-justify-content-flex-end
+                            .button.is-success Aceptar
+                            .button.is-danger.is-focused Cancelar
+        
+        #delete_user_form.modal.is-clipped
+            .modal-background
+            .modal-content
+                .box
+                    h2.is-size-2.m-5.has-text-centered ¿Seguro quieres eliminar al usuario {{.User.Email}}?
+                    
+                    .buttons.is-justify-content-center
+                            .button.is-success.is-fullwidth Aceptar
+                            .button.is-danger.is-fullwidth.is-focused Cancelar
+
         .container
             .columns
                 include includes/menu.pug
@@ -59,3 +87,5 @@ html(lang="en")
                                 span.pagination-ellipsis &hellip;
                             li
                                 a.pagination-link(aria-label="Goto page 89") 89
+
+        script(src="js/users.js")

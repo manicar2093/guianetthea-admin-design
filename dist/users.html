@@ -16,6 +16,43 @@
         </div><a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false" data-target="menuAdmin"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a>
       </div>
     </nav>
+    <div class="modal is-clipped" id="restore_password_form">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="box">
+          <h2 class="is-size-2 mb-3">Usuario {{Usuario}}</h2>
+          <div class="field">
+            <label class="label">Nueva contraseña</label>
+            <div class="control">
+              <input class="input" type="password">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Confirma contraseña</label>
+            <div class="control">
+              <input class="input" type="password">
+            </div>
+            <p class="help is-danger">Las contraseñas no coinciden</p>
+          </div>
+          <div class="buttons is-justify-content-flex-end">
+            <div class="button is-success">Aceptar</div>
+            <div class="button is-danger is-focused">Cancelar</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal is-clipped" id="delete_user_form">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="box">
+          <h2 class="is-size-2 m-5 has-text-centered">¿Seguro quieres eliminar al usuario {{.User.Email}}?</h2>
+          <div class="buttons is-justify-content-center">
+            <div class="button is-success is-fullwidth">Aceptar</div>
+            <div class="button is-danger is-fullwidth is-focused">Cancelar</div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <div class="columns">
         <aside class="aside column is-2 is-fullheight section invisible-on-touch is-full-touch" id="menuAdmin">
@@ -317,5 +354,6 @@
         </div>
       </div>
     </div>
+    <script src="js/users.js"></script>
   </body>
 </html>
