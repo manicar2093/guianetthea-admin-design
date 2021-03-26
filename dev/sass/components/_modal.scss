@@ -1,0 +1,10 @@
+.modal {
+    transition: all .2s ease-in;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    &.is-active {
+        visibility: visible;
+        opacity: 1;
+    }
+}

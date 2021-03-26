@@ -7826,3 +7826,12 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
     display: block;
     margin-bottom: .7rem;
     color: #bfbfbf; }
+
+.modal {
+  transition: all .2s ease-in;
+  display: flex;
+  visibility: hidden;
+  opacity: 0; }
+  .modal.is-active {
+    visibility: visible;
+    opacity: 1; }
